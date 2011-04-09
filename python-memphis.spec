@@ -1,6 +1,6 @@
 %define name python-memphis
 %define version 0.2.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Python bindings for the Memphis maps renderer
 Name: %{name}
@@ -32,11 +32,11 @@ bindings for this library.
 
 %prep
 %setup -q -n pymemphis-mainline
-./autogen.sh
+NOCONFIGURE=1 ./autogen.sh
 
 %build
 %configure2_5x
-%make
+%make LIBS="`python-config --libs`"
 
 %install
 rm -rf %{buildroot}
@@ -54,4 +54,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %_datadir/pymemphis
 %_libdir/pkgconfig/pymemphis-0.2.pc
-
