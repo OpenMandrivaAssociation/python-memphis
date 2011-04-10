@@ -1,6 +1,6 @@
 %define name python-memphis
 %define version 0.2.1
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary: Python bindings for the Memphis maps renderer
 Name: %{name}
