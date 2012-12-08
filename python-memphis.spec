@@ -54,3 +54,23 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %_datadir/pymemphis
 %_libdir/pkgconfig/pymemphis-0.2.pc
+
+
+%changelog
+* Sun Apr 10 2011 Funda Wang <fwang@mandriva.org> 0.2.1-4mdv2011.0
++ Revision: 652196
+- rebuild
+
+* Sat Apr 09 2011 Funda Wang <fwang@mandriva.org> 0.2.1-3
++ Revision: 652108
+- link iwth libpython
+
+* Thu Nov 04 2010 Götz Waschk <waschk@mandriva.org> 0.2.1-2mdv2011.0
++ Revision: 593363
+- rebuild for new python 2.7
+
+* Wed Aug 04 2010 Götz Waschk <waschk@mandriva.org> 0.2.1-1mdv2011.0
++ Revision: 565771
+- import python-memphis
+
+
