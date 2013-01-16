@@ -1,16 +1,12 @@
-%define name python-memphis
-%define version 0.2.1
-%define release %mkrel 5
-
 Summary: Python bindings for the Memphis maps renderer
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Name: python-memphis
+Version: 0.2.1
+Release: 6
 Source0: pymemphis-mainline-master.tar.gz
+Patch0: pymemphis-automake-1.13.patch
 License: GPLv2+
 Group: Development/Python
 Url: http://gitorious.net/pymemphis
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: memphis-devel
 BuildRequires: python-gobject-devel
 BuildRequires: python-cairo-devel
@@ -32,6 +28,7 @@ bindings for this library.
 
 %prep
 %setup -q -n pymemphis-mainline
+%apply_patches
 NOCONFIGURE=1 ./autogen.sh
 
 %build
