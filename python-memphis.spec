@@ -1,7 +1,7 @@
 Summary: Python bindings for the Memphis maps renderer
 Name: python-memphis
 Version: 0.2.1
-Release: 6
+Release: 7
 Source0: pymemphis-mainline-master.tar.gz
 Patch0: pymemphis-automake-1.13.patch
 License: GPLv2+
