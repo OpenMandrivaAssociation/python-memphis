@@ -10,6 +10,7 @@ Patch0:		pymemphis-automake-1.13.patch
 BuildRequires:	pkgconfig(memphis-0.2)
 BuildRequires:	pkgconfig(pycairo)
 BuildRequires:	pkgconfig(pygobject-2.0)
+BuildRequires:	pkgconfig(python2)
 
 %description
 Libmemphis is a generic glib/cairo based OSM renderer library. It
@@ -29,10 +30,12 @@ bindings for this library.
 %prep
 %setup -q -n pymemphis-mainline
 %apply_patches
-NOCONFIGURE=1 ./autogen.sh
+
 
 %build
-%configure2_5x
+export PYTHON=%{__python2}
+NOCONFIGURE=1 ./autogen.sh
+%configure
 %make LIBS="`python-config --libs`"
 
 %install
@@ -40,7 +43,7 @@ NOCONFIGURE=1 ./autogen.sh
 
 %files
 %doc AUTHORS README
-%{py_platsitedir}/memphis
+%{py2_platsitedir}/memphis
 
 %files devel
 %{_datadir}/pymemphis
