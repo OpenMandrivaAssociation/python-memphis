@@ -1,7 +1,7 @@
 Summary:	Python bindings for the Memphis maps renderer
 Name:		python-memphis
 Version:	0.2.1
-Release:	14
+Release:	15
 License:	GPLv2+
 Group:		Development/Python
 Url:		http://gitorious.net/pymemphis
