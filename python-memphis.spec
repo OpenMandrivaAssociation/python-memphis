@@ -29,7 +29,7 @@ bindings for this library.
 
 %prep
 %setup -q -n pymemphis-mainline
-%apply_patches
+%autopatch -p1
 
 
 %build
