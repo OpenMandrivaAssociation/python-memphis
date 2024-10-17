@@ -4,7 +4,7 @@ Version:	0.2.1
 Release:	16
 License:	GPLv2+
 Group:		Development/Python
-Url:		http://gitorious.net/pymemphis
+Url:		https://gitorious.net/pymemphis
 Source0:	pymemphis-mainline-master.tar.gz
 Patch0:		pymemphis-automake-1.13.patch
 BuildRequires:	pkgconfig(memphis-0.2)
