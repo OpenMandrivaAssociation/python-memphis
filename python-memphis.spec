@@ -7,6 +7,11 @@ Group:		Development/Python
 Url:		https://gitorious.net/pymemphis
 Source0:	pymemphis-mainline-master.tar.gz
 Patch0:		pymemphis-automake-1.13.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(memphis-0.2)
 BuildRequires:	pkgconfig(pycairo)
 BuildRequires:	pkgconfig(pygobject-2.0)
